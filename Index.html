@@ -1,1 +1,36 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DSH OSINT Toolkit</title>
+</head>
+
+<body>
+
+    <h1>DSH OSINT Toolkit</h1>
+
+    <p>Enter a username:</p>
+
+    <input type="text" id="username" placeholder="Enter username">
+
+    <button onclick="searchUsername()">Search</button>
+
+    <p id="result"></p>
+
+    <script>
+        function searchUsername() {
+            let username = document.getElementById("username").value;
+
+            if (username === "") {
+                document.getElementById("result").innerText =
+                    "Please enter a username.";
+                return;
+            }
+
+            document.getElementById("result").innerText =
+                "Search query created for: " + username;
+        }
+    </script>
+
+</body>
+</html>
